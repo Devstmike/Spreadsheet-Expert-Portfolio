@@ -1,0 +1,106 @@
+.Pageprojects{
+    color: white;
+    margin: 100px 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 0 50px ;
+    /* border: 1px solid red; */
+}  
+
+
+.Pageprojects h1{
+    color: var(--mygreen);
+    margin-bottom: 150px;
+    font-size: 3rem;
+    border: 1px solid white;
+    width: 100%;
+    text-align: center;
+    border-radius: 8px;
+    text-shadow: 1px 1px 10px white;
+    box-shadow: 1px 1px  10px white;
+    letter-spacing: 10px;
+   
+}
+
+body{
+    font-family: var(--poppins);
+}
+
+
+.Pageprojects .Wrapper{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 200px;
+    
+}
+
+.Pageprojects .Eachproject .image{
+    /* border: 1px solid; */
+    border-radius: 10px;
+    border-color: white;
+    box-shadow: 1px 1px 20px white;
+}
+
+.Pageprojects .Eachproject .image img{  
+    width: 100%;
+    height: 100%;
+    background-color: red;
+    object-fit: cover;
+    border-radius: inherit;
+    border: inherit;
+    border-color: inherit;    
+}
+
+
+.Eachproject h3{
+    color: var(--mygreen);
+    margin-top: 10px;
+    font-size: 2rem;
+}
+
+.Eachproject    p{
+    text-align: justify;
+    margin: 10px 0;
+}
+
+
+.Eachproject small{
+    color: var(--creamColor);
+}
+
+body{
+    background-image: linear-gradient(rgba(0,0,0,0.9), rgba(0,0,0,0.9 )) ,url("./Assets/lauren-mancke-aOC7TSLb1o8-unsplash-1.jpg");
+    background-size: cover;
+    background-attachment: scroll;
+}
+
+.Pageprojects .Wrapper > .Eachproject:first-child .image{
+    display: flex;
+    overflow: auto;
+    scroll-snap-type: x mandatory;
+}
+
+
+.Pageprojects .Wrapper > .Eachproject:first-child .image img{
+    flex-shrink: 0;
+    scroll-snap-align: start;
+}
+
+
+@media only screen and (max-width: 992px) {
+    .Pageprojects .Wrapper{
+        grid-template-columns: repeat(1, 1fr);    
+}
+    
+.Pageprojects h1{
+    font-size: 1.3rem;
+    font-weight: bolder;
+}
+
+.Pageprojects{
+    margin: 10px;
+}
+
+}
